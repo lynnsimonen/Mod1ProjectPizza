@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pizza Order Form</title>
+    <link rel="stylesheet" href="PizzaCSS.css">
+
+</head>
+<body id="img">
+<container>
+<h1>Welcome to Villa Italia</h1>
+<button id="makePizza"><b>CLICK to Create Pizza</b></button>
+    <div id="step1"><h3>Choose the Pizza of Your Dreams:</h3>
+        <div class="zaGroup" id="sizeGroup">
+        <label for="sizeGroup" class="zaGroup">Size</label>
+            <select id="size" name="size" class="form-control" required>
+                <option disabled selected value>Select an option</option>
+                <option value="small" data-price="7">Small - $7</option>
+                <option value="medium" data-price="9">Medium - $9</option>
+                <option value="large" data-price="12">Large - $12</option>
+            </select>
+        </div>
+
+        <div class="zaGroup" id="crustGroup">
+        <label for="crustGroup" class="zaGroup">Crust</label>
+            <select id="crust" name="crust" class="form-control" required>
+                <option disabled selected value>Select an option</option>
+                <option value="thin">Thin</option>
+                <option value="pan">Pan</option>
+                <option value="gf">Gluten Free</option>
+            </select>
+        </div>
+
+        <div class="zaGroup" id="veggiesGroup">
+        <label for="veggiesGroup" class="zaGroup"><u>Veggies - $1.00 each</u></label>
+            <br>
+            <input type="checkbox" name="veggie" id="onions" data-name="onions, ">
+            <label for="onions">Onions</label>
+            <br>
+            <input type="checkbox" name="veggie" id="blackOlives" data-name="black olives, ">
+            <label for="blackOlives">Black Olives</label>
+            <br>
+            <input type="checkbox" name="veggie" id="mushrooms" data-name="mushrooms, ">
+            <label for="mushrooms">Mushrooms</label>
+            <br>
+            <input type="checkbox" name="veggie" id="pineapple" data-name="pineapple, ">
+            <label for="pineapple">Pineapple</label>
+            <br>
+            <input type="checkbox" name="veggie" id="tomatoes" data-name="tomatoes">
+            <label for="tomatoes">Tomatoes</label>
+        </div>
+
+        <div class="zaGroup" id="meatGroup">
+        <label for="meatGroup" class="zaGroup"><u>Meat - $1.50 each</u></label>
+            <br>
+            <input type="checkbox" name="meat" id="m-pepperoni" data-name="pepperoni, ">
+            <label for="m-pepperoni">Pepperoni</label>
+            <br>
+            <input type="checkbox" name="meat" id="m-sausage" data-name="sausage, ">
+            <label for="m-sausage">Sausage</label>
+            <br>
+            <input type="checkbox" name="meat" id="m-canadianbacon" data-name="canadian bacon">
+            <label for="m-canadianbacon">Canadian Bacon</label>
+            <br>
+        </div>
+        <br>
+        <button class="next" id="nextContactInfo">NEXT</button>
+    </div>
+
+    <div id="step2"><h3>Customer Info:</h3>
+        <div class="zaGroup" id="contactGroup">
+
+            <br>
+            <label for="firstname" class="contact">First Name</label>
+            <input type="text" name="contact" id="firstname" class="contact"
+            title="first name">
+            <br>
+            <label for="lastname" class="contact">Last Name</label>
+            <input type="text" name="contact" id="lastname" class="contact"
+            title="last name">
+            <br>
+            <label for="streetaddress" class="contact">Street Address</label>
+            <input type="text" name="contact" id="streetaddress" class="contact"
+            title="street address">
+            <br>
+            <label for="city" class="contact">City</label>
+            <input type="text" name="contact" id="city" class="contact"
+            title="city">
+            <br>
+            <label for="state" class="contact">State</label>
+            <input type="text" name="contact" id="state" class="contact"
+            pattern="[AA] {2}" title="two letter state abbrev">
+            <br>
+            <label for="zip" class="contact">Zip</label>
+            <input type="text" name="contact" id="zip" class="contact"
+            pattern="[AAAAA] {5}" title="zip code">
+            <br>
+            <label for="phone" class="contact">Phone</label>
+            <input type="text" name="contact" id="phone" class="contact"
+            pattern="XXX-XXX-XXXX {12}" title="XXX-XXX-XXXX">
+            <br>
+        </div>
+        <br>
+        <br>
+        <br>
+        <button class="previous" id="previous1">PREVIOUS</button>
+        <button class="next" id="nextOrderSummary">NEXT</button>
+
+    </div>
+
+    <div id="step3"><h3>Order Details:</h3>
+        <div class="zaGroup" id="orderSummary">
+
+            <div id="pizzadetails">
+                <p class="details">What's on your pizza?:</p>
+                <label for="sizeFinal" class="output">Size: </label>
+                <output id="sizeFinal"></output><br>
+                <label for="crustFinal" class="output">Crust: </label>
+                <output id="crustFinal"></output><br>
+                <label for="vegFinal" class="output">Veggie Toppings: </label>
+                <output id="vegFinal"></output><br>
+                <label for="meatFinal" class="output">Meat Toppings: </label>
+                <output id="meatFinal"></output><br>
+            </div>
+            <br>
+            <div id="customerdetails">
+                <p class="details">Customer Info:</p>
+                <label for="customerName" class="output">Name: </label>
+                <output id="customerName"></output><br>
+                <label for="customerAddress" class="output">Address: </label>
+                <output id="customerAddress"></output><br>
+                <label for="customerPhone" class="output">Phone: </label>
+                <output id="customerPhone"></output><br>
+            </div>
+            <br>
+            <div id="costdetails">
+                <p class="details">Cost Details:</p>
+                <label for="subtotal" class="output">Subtotal: </label>
+                <output id="subtotal"></output><br>
+                <label for="tax" class="output">Tax (5.1%): </label>
+                <output id="tax"></output>    <br>
+                <label for="deliveryFee" class="output">Delivery Fee: </label>
+                <output id="deliveryFee"></output><br>
+                <label for="totalDue" class="output">Total Due: </label>
+                <output id="totalDue"></output>    <br>
+            </div>
+            <p id="submitOrder">Thanks for your order!<br>Your pizza is on it's way!</p>
+        </div>
+        <button class="previous" id="previous2">PREVIOUS</button>
+        <button class="next" id="placeOrder">PLACE ORDER</button>
+
+    </div>
+
+</container>
+</body>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+        crossorigin="anonymous"></script>
+<script src="PizzaCode.js"></script>
+</html>

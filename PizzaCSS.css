@@ -1,0 +1,56 @@
+h1 {
+    color: #4F4942;
+    margin-bottom: 5px;
+}
+
+output {
+    display: inline-block;
+    float: left;
+    width: 300px;
+}
+
+label.output {
+    display: inline-block;
+    float: left;
+    clear: left;
+    width: 130px;
+    text-align: left;
+}
+input.contact {
+    display: inline-block;
+    float: left;
+    width: 300px;
+    background-color: #FAFAFA;
+}
+label.contact {
+    display: inline-block;
+    float: left;
+    clear: left;
+    width: 130px;
+    text-align: left;
+}
+
+p.details{
+    margin-bottom: 0px;
+}
+
+p{
+    font-weight: bold ;
+}
+
+button {
+    background-color: white;
+    border-radius: 25px;
+    border: 2px solid #73AD21;
+    padding: 5px;
+    margin-top: 1em;
+    width: 175px;
+}
+body {
+    margin-left: 55%;
+    background-image: url("WineCountry.JPG");
+    background-repeat: no-repeat;
+    background-size: 80em;
+    background-position-x: center;
+    background-color: #FAFAFA;
+}
